@@ -3,6 +3,8 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Header from './Components/Header/Header';
 import Product from './Components/Product/Product';
 import Form from './Components/Form/Form'
+import "./App.css"
+import axios from "axios"
 
 class App extends Component {
     constructor(props) {
@@ -40,26 +42,26 @@ class App extends Component {
     render() {
         return(
             <div>
-                <form>
-                <div>Image URL:</div>
-                <input onChange={this.handleChange}/>
-                <div>Product Name</div>
-                <input onChange={this.handleChange}/>
-                <div>Price</div>
-                <input onChange={this.handleChange}/>
+              <header>
+                <Header />
+              </header>
+<div>
+              <div>
                 <div>
-                <button type="reset">Cancel</button>
-                <button type="submit">Add to inventory</button>
-                
-
+                  <Dashboard />
                 </div>
-                </form>
                 <div>
-        <Dashboard inventory={this.state.inventory}/>
-        <Product />
-      </div>
-      <Form />
-      <Header />
+                  <Form />
+                </div>
+                </div>
+
+
+
+
+              </div>
+       
+      
+      
 
             </div>
         )
