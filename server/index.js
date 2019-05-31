@@ -7,6 +7,14 @@ const app = express();
 
 app.use(express.json());
 const {SERVER_PORT, CONNECTION_STRING} = process.env;
+
+
+app.get("/api/inventory", controller.getAll);
+app.get("/api/inventory/:name", controller.getOne)
+app.put("/api/inventory", controller.update);
+app.post("/api/inventory", controller.create);
+app.delete("/api/inventory/:name", controller.delete);
+
  
 
 massive(CONNECTION_STRING).then(db => {
