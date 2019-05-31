@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
 
 
+
 class Dashboard extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state ={
+            
+
 
         };
     }
     render() {
         return(
             <div>
-                Dashboard
+                {this.props.inventory.image}
+                {this.props.inventory.name}
+                {this.props.inventory.price}
 
             </div>
         )
